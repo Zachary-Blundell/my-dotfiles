@@ -1,0 +1,18 @@
+{
+    "admin": {
+        "prefix": "admin",
+        "body": [
+            "- [ ] review emails",
+            "- [ ] review tasks",
+            "    - [ ] organize inbox",
+            "    - [ ] timebox tasks",
+            "- [ ] review next week",
+            "    - [ ] level 2 calendars",
+            "    - [ ] copy relavent events from Emma's",
+            "- [ ] plan next three days",
+            "    Remember don't go crazy here and you got this!",
+            ""
+        ],
+        "description": "Drop in your admin todo"
+    }
+}

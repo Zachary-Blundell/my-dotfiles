@@ -1,0 +1,148 @@
+palette = "catppuccin_mocha"
+
+format = """
+[](#3b4252)\
+$username\
+[](bg:lavender fg:#3b4252)\
+$directory\
+[](fg:lavender bg:blue)\
+$git_branch\
+$git_status\
+[](fg:blue bg:sapphire)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+[](fg:sapphire bg:sky)\
+$time\
+[ ](fg:sky)\
+"""
+command_timeout = 5000
+# disable the blank line at the start of the prompt
+# add_newline = false
+
+# you can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "fg:text bg:#3b4252"
+style_root = "fg:purple bg:#3b4252"
+format = '[$user ]($style)'
+
+[directory]
+style = "fg:surface0 bg:lavender"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in oh my posh:
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[c]
+symbol = " "
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:mauve"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "fg:surface0 bg:blue"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:surface0 bg:blue"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:sapphire"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%r" # hour:minute format
+style = "fg:surface0 bg:sky"
+format = '[ $time ]($style)'
+
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+purple = "#8839ef"

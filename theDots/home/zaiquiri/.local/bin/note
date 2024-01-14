@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+
+function save
+{
+    cd ~/Documents/Notebook/
+    echo "Adding all"
+    git add .
+    echo "Commiting Auto Save"
+    git commit -m "Auto Save"
+    echo "Pushing"
+    git push
+    cd "$OLDPWD"
+}
+
+function note
+{
+    cd ~/Documents/Notebook/
+    git pull || (echo "Problme pulling from Github" && sleep 5)
+    lvim . && save;
+}
+
+while [ "$1" != "" ]; do
+    case $1 in
+        -s | s | save )
+            save
+            exit 
+            ;;
+        * )
+            note
+            exit 
+    esac
+    shift
+done
+
+note

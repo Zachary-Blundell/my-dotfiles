@@ -1,0 +1,58 @@
+# set floating (nontiling)for apps needing it:
+for_window [class="Yad" instance="yad"] floating enable
+for_window [app_id="yad"] floating enable
+for_window [app_id="blueman-manager"] floating enable,  resize set width 40 ppt height 30 ppt
+for_window [app_id="mpv"] floating enable,  resize set width 50 ppt height 30 ppt
+
+# set floating (nontiling) for special apps:
+for_window [class="Xsane" instance="xsane"] floating enable
+for_window [app_id="pavucontrol" ] floating enable, resize set width 40 ppt height 30 ppt
+for_window [class="qt5ct" instance="qt5ct"] floating enable, resize set width 60 ppt height 50 ppt
+for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
+for_window [app_id="pamac-manager"] floating enable, resize set width 80 ppt height 70 ppt
+for_window [class="Lxappearance"] floating enable, resize set width 60 ppt height 50 ppt
+for_window [app_id="garuda-welcome"] floating enable
+for_window [app_id="garuda-assistant"] floating enable
+for_window [app_id="garuda-gamer"] floating enable
+for_window [app_id="Garuda.garuda-settings-manager"] floating enable
+for_window [app_id="garuda-network-assistant"] floating enable
+for_window [app_id="garuda-boot-options"] floating enable
+
+# set floating for window roles
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_role="About"] floating enable
+for_window [title="File Operation Progress"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
+for_window [app_id="org.gnome.Calculator"] floating enable
+for_window [app_id="azote"] floating enable, sticky enable, border normal
+for_window [app_id="firedragon" title="Library"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
+for_window [app_id="floating_shell_portrait"] floating enable, border pixel 1, sticky enable, resize set width 30 ppt height 40 ppt
+for_window [title="Picture in picture"] floating enable, sticky enable
+for_window [title="nmtui"] floating enable,  resize set width 50 ppt height 70 ppt
+for_window [title="htop"] floating enable, resize set width 50 ppt height 70 ppt
+for_window [app_id="xsensors"] floating enable
+for_window [title="Save File"] floating enable
+for_window [app_id="firedragon" title="firedragon — Sharing Indicator"] kill
+for_window [class="Picture-in-Picture"] floating enable, sticky enable, border normal
+for_window [title="Picture-in-Picture.*"] floating enable, sticky enable, border normal
+
+# Inhibit idle
+for_window [app_id="firedragon"] inhibit_idle fullscreen
+for_window [app_id="Chromium"] inhibit_idle fullscreen
+
+# Automatically putting clients on specific workspaces
+# to find the class name of a program you can use this 
+# wlprop | grep WM_CLASS
+assign [class="librewolf-default"] $ws1
+assign [class="blackbox"] $ws2
+assign [class="ticktick"] $ws3
+assign [class="firefox"] $ws5
+assign [class="spotify"] $ws6
+# This set the defualt monitor for workspace 1 and 2
+workspace 1 output HDMI-A-0 eDP
+workspace 2 output eDP
+
