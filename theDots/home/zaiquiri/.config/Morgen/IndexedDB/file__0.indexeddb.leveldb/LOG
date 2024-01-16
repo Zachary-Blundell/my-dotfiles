@@ -1,0 +1,14 @@
+2024/01/10-18:42:18.679 dddc Reusing MANIFEST /home/zaiquiri/.config/Morgen/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2024/01/10-18:42:18.679 dddc Recovering log #1493
+2024/01/10-18:42:18.704 dddc Reusing old log /home/zaiquiri/.config/Morgen/IndexedDB/file__0.indexeddb.leveldb/001493.log 
+2024/01/10-18:43:04.289 dddc Level-0 table #1499: started
+2024/01/10-18:43:04.298 dddc Level-0 table #1499: 865972 bytes OK
+2024/01/10-18:43:04.300 dddc Delete type=0 #1493
+2024/01/10-18:43:04.589 dddb Compacting 1@1 + 2@2 files
+2024/01/10-18:43:04.626 dddb Generated table #1500@1: 43057 keys, 2271480 bytes
+2024/01/10-18:43:04.666 dddb Generated table #1501@1: 38550 keys, 1665220 bytes
+2024/01/10-18:43:04.666 dddb Compacted 1@1 + 2@2 files => 3936700 bytes
+2024/01/10-18:43:04.667 dddb compacted to: files[ 0 0 2 0 0 0 0 ]
+2024/01/10-18:43:04.667 dddb Delete type=2 #1495
+2024/01/10-18:43:04.667 dddb Delete type=2 #1496
+2024/01/10-18:43:04.667 dddb Delete type=2 #1499

@@ -4,6 +4,13 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 require("zaiquiri.options")
 require("zaiquiri.keymaps")
+require("zaiquiri.null_ls")
+require("zaiquiri.marks")
+require("zaiquiri.cmp")
+
+-- require("zaiquiri.catppuccin")
+-- require("zaiquiri.harpoon")
+
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -12,8 +19,10 @@ let g:LanguageClient_serverCommands = {
     \ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
     \ }
 ]])
+
 lvim.plugins = {
     { "tpope/vim-fugitive" },
+    { "chentoast/marks.nvim" },
     { "catppuccin/nvim",     name = "catppuccin", priority = 1000 },
     { "ThePrimeagen/harpoon" },
     {
@@ -21,11 +30,7 @@ lvim.plugins = {
         config = function() vim.fn["mkdp#util#install"]() end,
     },
     { "windwp/nvim-ts-autotag" },
-    { "chentoast/marks.nvim" },
+    -- { 'tzachar/cmp-ai',        dependencies = 'nvim-lua/plenary.nvim' },
+    -- { 'hrsh7th/nvim-cmp',      dependencies = { 'tzachar/cmp-ai' } },
 }
-
-require("zaiquiri.harpoon")
-require("zaiquiri.catppuccin")
-
-
-lvim.colorscheme = 'catppuccin-mocha'
+-- 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

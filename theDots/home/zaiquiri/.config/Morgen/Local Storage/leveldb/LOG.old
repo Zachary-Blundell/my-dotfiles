@@ -1,0 +1,5 @@
+2024/01/10-18:41:53.473 d712 Reusing MANIFEST /home/zaiquiri/.config/Morgen/Local Storage/leveldb/MANIFEST-000001
+2024/01/10-18:41:53.476 d712 Recovering log #1043
+2024/01/10-18:41:53.476 d712 Reusing old log /home/zaiquiri/.config/Morgen/Local Storage/leveldb/001043.log 
+2024/01/10-18:42:16.032 d745 Level-0 table #1047: started
+2024/01/10-18:42:16.033 d745 Level-0 table #1047: 73160 bytes OK

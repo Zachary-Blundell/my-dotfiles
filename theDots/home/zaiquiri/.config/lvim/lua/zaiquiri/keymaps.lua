@@ -19,16 +19,14 @@ vim.g.maplocalleader = " "
 
 -- Normal --
 -- Better window navigation
--- keymap("n", "<C-h>", "<C-w>h", opts)
--- keymap("n", "<C-j>", "<C-w>j", opts)
--- keymap("n", "<C-k>", "<C-w>k", opts)
--- keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<leader> h", "<C-w>h", opts)
 keymap("n", "<leader> j", "<C-w>j", opts)
 keymap("n", "<leader> k", "<C-w>k", opts)
 keymap("n", "<leader> l", "<C-w>l", opts)
-
--- keymap("n", "<leader> z", "<A-T>", opts)
 
 -- Keep search terms in the center when searching 
 keymap("n", "n", "nzzzv", opts)
@@ -50,7 +48,7 @@ keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
 --  Timestamp
 -- Sat Jul 22 02:14:32 PM CEST 2023
 -- keymap("n", "<A-T>", ":r! date<CR>", opts)
--- 22 ven. sept. 2023 14:33:55 CEST
+-- ven. 22 sept. 2023 14:33:55 CEST
 keymap("n", "<A-T>", ":r! date +\\%d\\ \\%a\\ \\%b\\ \\%y\\ \\%Z <CR>", opts)
 
 -- 14:17:20
@@ -59,6 +57,7 @@ keymap("n", "<A-t>", ":r! date +\\%H:\\%M:\\%S <CR>", opts)
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+keymap("i", "JK", "<ESC>", opts)
 keymap("v", "<C-jk>", "<ESC>", opts)
 
 -- Visual --

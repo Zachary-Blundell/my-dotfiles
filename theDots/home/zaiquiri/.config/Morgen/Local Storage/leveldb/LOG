@@ -1,0 +1,24 @@
+2024/01/10-18:42:17.517 dddc Reusing MANIFEST /home/zaiquiri/.config/Morgen/Local Storage/leveldb/MANIFEST-000001
+2024/01/10-18:42:17.521 dddc Recovering log #1043
+2024/01/10-18:42:17.521 dddc Level-0 table #1046: started
+2024/01/10-18:42:17.525 dddc Level-0 table #1046: 73160 bytes OK
+2024/01/10-18:42:17.525 dddc Recovering log #1046
+2024/01/10-18:42:17.525 dddc Level-0 table #1047: started
+2024/01/10-18:42:17.526 dddc Level-0 table #1047: 70848 bytes OK
+2024/01/10-18:42:17.527 dddc Delete type=0 #1043
+2024/01/10-18:42:17.527 dddc Delete type=0 #1046
+2024/01/10-18:43:18.357 dddc Level-0 table #1050: started
+2024/01/10-18:43:18.359 dddc Level-0 table #1050: 72000 bytes OK
+2024/01/10-18:43:18.360 dddc Delete type=0 #1048
+2024/01/10-18:43:18.360 dddc Compacting 4@0 + 1@1 files
+2024/01/10-18:43:18.361 dddc Generated table #1051@0: 1227 keys, 91723 bytes
+2024/01/10-18:43:18.361 dddc Compacted 4@0 + 1@1 files => 91723 bytes
+2024/01/10-18:43:18.362 dddc compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/01/10-18:43:18.362 dddc Delete type=2 #1041
+2024/01/10-18:43:18.362 dddc Delete type=2 #1044
+2024/01/10-18:43:18.362 dddc Delete type=2 #1047
+2024/01/10-18:43:18.362 dddc Delete type=2 #1046
+2024/01/10-18:43:18.362 dddc Delete type=2 #1050
+2024/01/10-18:44:18.357 dddb Level-0 table #1053: started
+2024/01/10-18:44:18.358 dddb Level-0 table #1053: 70749 bytes OK
+2024/01/10-18:44:18.359 dddb Delete type=0 #1049

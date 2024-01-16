@@ -1,6 +1,11 @@
 #!/bin/bash
-
-
+#  _   _       _            
+# | \ | | ___ | |_ ___  ___ 
+# |  \| |/ _ \| __/ _ \/ __|
+# | |\  | (_) | ||  __/\__ \
+# |_| \_|\___/ \__\___||___/
+# Author : Zachary Blundell
+# This script is used for opening and autosaveing notes to github
 
 function save
 {
