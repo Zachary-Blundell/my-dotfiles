@@ -540,6 +540,8 @@ eval "$(starship init bash)"
 # 	echo "can't found the autojump script"
 # fi
 
+# genertate qr codes in the terminal
+alias qr='qrencode -m 2 -t utf8 <<< "$1"'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -551,5 +553,9 @@ export PATH=$PATH:/home/zaiquiri/.spicetify
 fastfetch -l garuda
 source /usr/share/nvm/init-nvm.sh
 
+# for Android studio
 export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/cmdline-tools/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator
+
+# for Flutter
+export PATH=$PATH:~/snap/flutter/common/flutter/bin

@@ -46,7 +46,7 @@ set $alt Mod1
 
 # Wallpapers
 set $lockScreenWallpaper ~/Pictures/wallpapers/powerarrow-dark.png
-set $wallpaper ~/Pictures/wallpapers/powerarrow-dark.png
+set $wallpaper ~/Media/Pictures/wallpapers/Favorites/0071.jpg
 # mini city 0240
 # trees 0009.jpg 0272.jpg
 # leaf 0144.jpg
@@ -88,12 +88,11 @@ bindsym $super+v split v
 ## Application Qucik Launch ##
 bindsym $super+F1 exec $preferredCalendar;focus
 bindsym $super+F2 exec $preferredMailClient;focus
-bindsym $super+F3 exec $preferredFileManager;focus
+bindsym $super+t exec $preferredFileManager;focus
 bindsym $super+F4 exec $preferredTextEditor;focus
 bindsym $super+i exec $preferredBrowser;focus
 # Terminal Emulator
 bindsym $super+Return exec $preferredTerminalEmulator;focus
-bindsym $super+t exec kitty
 
 ## Screen Capturing ##
 bindsym $super+F9 exec $preferredScreenCaptureTool
@@ -118,8 +117,8 @@ bindsym $super+Shift+Up move up
 bindsym $super+Shift+Right move right
 
 # move focused workspace between monitors
-bindsym $super+Ctrl+greater move workspace to output up
-bindsym $super+Ctrl+less move workspace to output down
+bindsym $super+greater move workspace to output up
+bindsym $super+less move workspace to output down
 
 # move focused window to workspace
 bindsym $super+Shift+1 move container to workspace number $ws1
@@ -169,9 +168,9 @@ mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing right will grow the window’s width.
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym l resize grow width 5 px or 5 ppt
         # Pressing left will shrink the window’s width.
-        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym h resize shrink width 5 px or 5 ppt
         # Pressing down will grow the window’s height.
         bindsym j resize grow height 10 px or 10 ppt
         # Pressing up will shrink the window’s height.
@@ -303,10 +302,16 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="keepassxc"] floating enable
 for_window [class="garuda-welcome"] floating enable
-
-for_window [title="^Android Emulator.*"] floating enable border normal
-
-
+# for_window [title="^Android Emulator.*"] floating disable border normal move position 79px 1099px
+for_window [title="^Android Emulator.*"] floating disable border normal resize set 455px 
+# for_window [title="Extension.*"] fullscreen enable
+for_window [title="Extension.*"] move position center
+# resize shrink width 10 px or 10 ppt
+# user specified location: 78, 1099
+# 		user specified size: 487 by 1030
+# 455
+# user specified size: 487 by 1030
+# user specified size: 436 by 923
 ##################
 ### WORKSPACE  ###
 ##################
@@ -328,7 +333,7 @@ bindsym $super+9 workspace number $ws9
 # to find the class name of a program you can use this 
 # xprop | grep WM_CLASS
 assign [class="librewolf-default"] $ws1
-assign [class="blackbox"] $ws2
+# assign [class="blackbox"] $ws2
 assign [class="Morgen"] $ws3
 assign [class="firefox"] $ws5
 assign [class="chat-gpt"] $ws9
