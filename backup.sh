@@ -35,11 +35,12 @@ sleep 1
 # Step 2: Starting the backup process.
 clearLine "🚀 Starting backup..."
 sleep 1
+clearLine 
 
 # Looping through the list & avoiding the empty spaces
 sed '/^[ \t]*$/d' $backupPaths | while read filePath; do
   # Step 3: Copying files.
-  clearLine "⏳ Copying: $filePath"
+  "⏳ Copying: $filePath"
 
   # Find & replace for ~ with home path
   findThis="~/"
