@@ -28,7 +28,7 @@ keymap("n", "<leader> j", "<C-w>j", opts)
 keymap("n", "<leader> k", "<C-w>k", opts)
 keymap("n", "<leader> l", "<C-w>l", opts)
 
--- Keep search terms in the center when searching 
+-- Keep search terms in the center when searching
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
@@ -83,3 +83,10 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+-- Flutter --
+keymap("n", "<leader>r", ":FlutterRestart<CR>", opts)
+keymap("n", "<leader>R", ":FlutterRun<CR>", opts)
+
+
+keymap('n', '<space>D', ":vim.lsp.buf.type_definition", opts)

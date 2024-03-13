@@ -1,0 +1,41 @@
+#!/bin/bash
+
+terminateProcesses ()
+{
+  # Identify and terminate non-essential processes
+		echo "Terminating non-essential processes..."
+		killall evolution-addressbook-factory
+		killall evolution-calendar-factory
+		killall evolution-alarm-notify
+		killall evolution-source-registry
+		killall firedragon
+		killall whatsapp-for-linux
+		killall signal
+		killall conky
+		killall teams
+		killall flameshot
+		killall morgen
+	# stop and disable background services
+		echo "stopping and disabling background services..."
+		sudo systemctl stop ollama
+		sudo systemctl stop nordvpnd
+		
+		echo "Optimization for gaming complete."
+}
+
+
+while [ "$1" != "" ]; do
+    case $1 in
+        -u | u | update )
+            terminateProcesses
+            update
+            exit 
+            ;;
+        * )
+            terminateProcesses
+            exit 
+    esac
+    shift
+done
+
+terminateProcesses

@@ -54,7 +54,7 @@ set $wallpaper ~/Media/Pictures/wallpapers/Favorites/0071.jpg
 
 ### Applications
 set $preferredTerminalEmulator /usr/local/bin/blackbox
-set $preferredBrowser /usr/bin/librewolf
+set $preferredBrowser /usr/bin/firedragon
 set $preferredFileManager /usr/bin/thunar
 set $preferredMailClient 
 set $preferredCalendar /usr/bin/morgen
@@ -213,7 +213,7 @@ gaps outer 5
 
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
-# smart_borders on
+smart_borders on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -255,9 +255,9 @@ mode "$mode_gaps_outer" {
 ## Floating Windows ##
 
 # toggle tiling / floating
-bindsym $super+space floating toggle
+bindsym $super+Shift+space floating toggle
 # change focus between tiling / floating windows
-bindsym $super+Shift+space focus mode_toggle
+bindsym $super+space focus mode_toggle
 # Use Mouse+$super to drag floating windows to their wanted position
 floating_modifier $super
 # toggle sticky for floating windows
@@ -338,10 +338,11 @@ assign [class="Morgen"] $ws3
 assign [class="firefox"] $ws5
 assign [class="chat-gpt"] $ws9
 
-exec_always --no-startup-id xrandr --output HDMI-A-5 --mode 1920x1080 --above DisplayPort-5
+# exec_always --no-startup-id xrandr --output HDMI-A-5 --mode 1920x1080 --above DisplayPort-5
+exec_always --no-startup-id xrandr --output DisplayPort-5 --mode 1920x1080 
 # This set the defualt monitor for workspace 1 and 2
 workspace 1 output DisplayPort-5  
-workspace 6 output HDMI-A-5
+# workspace 6 output HDMI-A-5
 
 # # exec --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1
 # exec --no-startup-id xrandr --output HDMI-A-0 --auto --above eDP

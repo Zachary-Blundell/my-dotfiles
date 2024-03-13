@@ -9,6 +9,9 @@ alias react='cd ~/Code/react/hello/ && lvim .'
 #jump to backend o-gaming files
 alias backend='cd ~/Code/oclock/Apothéose/back-o-gaming/; lvim .' #jump to myProjects file
 alias coding='cd ~/Code/myProjects/'
+alias dvc='cd ~/Code/Projects/Defiez-votre-cerveau/'
+alias dvcm='cd ~/Code/Projects/Defiez-votre-cerveau/dvc_flutter/; lvim .'
+
 savenotes() {
     cd ~/Documents/Notebook/
     echo "Adding all"
@@ -559,3 +562,49 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/cmdline-tools/bin:$ANDROID_H
 
 # for Flutter
 export PATH=$PATH:~/snap/flutter/common/flutter/bin
+
+if type complete &>/dev/null; then
+  __flutter_completion() {
+    local si="$IFS"
+    IFS=$'\n' COMPREPLY=($(COMP_CWORD="$COMP_CWORD" \
+                           COMP_LINE="$COMP_LINE" \
+                           COMP_POINT="$COMP_POINT" \
+                           flutter completion -- "${COMP_WORDS[@]}" \
+                           2>/dev/null)) || return $?
+    IFS="$si"
+  }
+  complete -F __flutter_completion flutter
+elif type compdef &>/dev/null; then
+  __flutter_completion() {
+    si=$IFS
+    compadd -- $(COMP_CWORD=$((CURRENT-1)) \
+                 COMP_LINE=$BUFFER \
+                 COMP_POINT=0 \
+                 flutter completion -- "${words[@]}" \
+                 2>/dev/null)
+    IFS=$si
+  }
+  compdef __flutter_completion flutter
+elif type compctl &>/dev/null; then
+  __flutter_completion() {
+    local cword line point words si
+    read -Ac words
+    read -cn cword
+    let cword-=1
+    read -l line
+    read -ln point
+    si="$IFS"
+    IFS=$'\n' reply=($(COMP_CWORD="$cword" \
+                       COMP_LINE="$line" \
+                       COMP_POINT="$point" \
+                       flutter completion -- "${words[@]}" \
+                       2>/dev/null)) || return $?
+    IFS="$si"
+  }
+  compctl -K __flutter_completion flutter
+fi
+
+###-end-flutter-completion-###
+
+## Generated 2024-03-09 13:41:41.043816Z
+## By /home/zaiquiri/snap/flutter/common/flutter/bin/cache/flutter_tools.snaps
